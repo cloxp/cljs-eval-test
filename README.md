@@ -32,6 +32,7 @@ In a cloxp workspace run:
 
 ```clj
 (require '[rksm.cloxp-cljs-repl.core :as cljs-repl])
+(require '[clojure.java.shell :as shell])
 (require '[cloxp.cljs-eval-test.server
            :refer [find-workspace-client start stop-server]])
 
@@ -39,7 +40,7 @@ In a cloxp workspace run:
 (start)
 
 ; open a web browser (on Mac OS):
-(clojure.java.shell/sh "open" "http://localhost:8084/workspace-tester.html")
+(shell/sh "open" "http://localhost:8084/workspace-tester.html")
 
 ; try remote eval
 (when-let [{id :id} (find-workspace-client)]
@@ -49,5 +50,4 @@ In a cloxp workspace run:
 
 ; open a ClojureScript workspace via menu bar -> open
 ; choose the connection to the client and eval stuff in there!
-
 ```

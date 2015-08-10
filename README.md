@@ -4,6 +4,30 @@ For testing [cloxp-cljs-repl](https://github.com/cloxp/cloxp-cljs-repl).
 
 # Usage
 
+## 1. Install
+
+```sh
+$ git clone https://github.com/cloxp/cljs-eval-test
+```
+
+## 2. cloxp
+
+Open cloxp (http://localhost:9001/cloxp.html), start a Clojure server, and load
+cljs-eval-test project.
+
+(Via a browser or eval the code below)
+
+```js
+clojure.Projects.loadProjectInteractively({
+  projectDir: "/path/to/cloxp.cljs-eval-test",
+  askToLoadNamespaces: false,
+  setCurrentDir: true,
+  informBrowsers: true
+});
+```
+
+## 3. Try cljs eval
+
 In a cloxp workspace run:
 
 ```clj
